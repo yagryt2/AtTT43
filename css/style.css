@@ -1,0 +1,312 @@
+:root {
+	--bg-color: #111111;
+	--txt-color: #ffffff;
+	--border-radius: 22px;
+}
+
+@font-face {
+    font-family: 'toxigenesisbold';
+    src: url('fonts/toxigenesis-webfont.woff2') format('woff2'),
+         url('fonts/toxigenesis-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+									/*MAIN STYLE*/
+body {
+	/*background-color: #fef0d2FF;
+	background-color: #45464f;
+	background-color: #22262a;*/
+	background-color: #111111;
+	font-family: toxigenesisbold;
+	color: white;
+}
+header {
+
+}
+main {
+
+}
+.main-div {
+	padding: 1vh;
+	flex-wrap: nowrap;
+	max-width: 1536px;
+}
+
+									/*HEADERS*/
+.top-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+
+}
+.bottom-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 2vh;
+	flex-wrap: nowrap;
+	
+}
+									/*HEADER LABEL + IMAGE*/
+.header-label {
+	font-family: 'toxigenesisbold';
+	font-size: 11vh;
+	flex-wrap: nowrap;
+	flex: 1.2;
+}
+.header-top-image {
+	border-radius: var(--border-radius);
+	flex: 1;
+	background: url(img/orange-gradient.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: auto;
+	flex-wrap: nowrap;
+}
+.header-bottom-image {
+	border-radius: var(--border-radius);
+	flex: 1;
+	background: url(img/orange-gradient-7.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: auto;
+	flex-wrap: nowrap;
+}
+
+
+
+									/*MAIN*/
+.input-and-output-background {
+	background-image: url(img/orange-gradient-5.jpg);
+	background-size: cover;
+	background-position: center;
+	border-radius: var(--border-radius);
+}
+.input-and-output {
+	/*background-color: #00AA0044;*/
+	padding: 1em 0em 1em 0em;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	
+	width: 100%;
+	margin-top: 28px;
+}
+.input {
+
+	background-color: #111111;
+	border-radius: var(--border-radius);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 36vh;
+	flex: 0.36;
+}
+.audio {
+	border: dashed;
+	border-width: 3.2px;
+	border-radius: var(--border-radius);
+	border-color: #1f2125;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 80%;
+	width: 93.5%;
+	margin: 1em 1em 1em 1em;
+}
+.upload-audio {
+	color: #1f2125;
+	align-self: center;
+}
+									/*ВЫШЕ АУДИО, BELOW NO BUTTON*/
+.loading-and-button {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+}
+.loading-div {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+.loading {
+	perspective: 700px;
+	margin-top: -28px;
+}
+.loading>span {
+    font-size: 100%;
+    font-family: "toxigenesisbold", sans-serif;
+    letter-spacing: 2.4em;
+    display: inline-block;
+    animation: flip 2.6s infinite linear;
+    transform-origin: 0 70%;
+    transform-style: preserve-3d;
+}
+@keyframes flip {
+    35% {
+       transform: rotateX(360deg);
+     }
+    100% {
+       transform: rotateX(360deg);
+     }
+}
+.loading>span:nth-child(2) {
+    animation-delay: 0.3s;
+}
+.loading>span:nth-child(3) {
+    animation-delay: 0.6s;
+}
+.loading>span:nth-child(4) {
+    animation-delay: 0.9s;
+}
+.loading>span:nth-child(5) {
+    animation-delay: 1.2s;
+}
+.loading>span:nth-child(6) {
+    animation-delay: 1.5s;
+}
+.loading>span:nth-child(7) {
+    animation-delay: 1.8s;
+}
+									/*ВЫШЕ ВСЕ ЧТО ОТНОСИТСЯ К АНИМАЦИИ ЗАГРУЗКИ*/
+									/*НИЖЕ ВЫВОД ТЕКСТА*/
+
+.output {
+	background-color: #111111;
+	border-radius: var(--border-radius);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*height: 60vh;*/
+	flex: 0.57;
+
+}
+.output-txt {
+	
+}
+
+.t-b-div {
+	height: 40em;
+}
+.trancribate-button {
+	margin-top: 28px;
+	/*background-color: #FF7F50;*/
+	background-color: #111111;
+	border: solid;
+	border-width: 1px;
+	border-radius: var(--border-radius);
+	border-color: #FF7F50;
+	display: flex;
+	justify-content: center;
+
+    font-family: "toxigenesisbold", sans-serif;
+	font-size: 200%;
+    letter-spacing: 1.1em;
+	width: 100%;
+	height: 3.2em;
+	line-height: 3.2em;
+	transition: scale 0.7s;
+}
+
+.trancribate-button:hover {
+	scale: 1.03;
+}
+.trancribate-button:active {
+	scale: 0.4;
+}
+
+.hidden-black-bg-1 {background-color: var(--bg-color);}
+.hidden-black-bg-1 {background-color: var(--bg-color);}
+
+
+@media screen and (max-width: 768px) {
+	header {
+		width: 56vh;
+
+		display: flex;
+		flex-direction: column;
+	}
+	.top-header {
+		display: flex;
+		flex-direction: column;
+	}
+	.bottom-header {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.header-label {
+		/*width: 40vh;*/
+		font-size: 5.6vh;
+	}
+
+	.get-audio {
+		width: 56vh;
+	}
+
+	.input-and-output-background {
+		width: 56vh;
+		height: 70vh;
+	}
+
+	.input-and-output {
+		height: 69vh;
+
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+
+		margin-top: 1vh;
+		padding: 0px;
+	}
+
+	.audio {
+		width: 44vh;
+	}
+
+	.input {
+		width: 90%;
+	}
+	.output {
+		width: 90%;
+		/*height: 90vh;*/
+	}
+
+	.t-b-div {
+		width: 55vh;
+		font-size: 22%;
+	}
+
+	.trancribate-button {
+		margin-top: 2vh;
+	}
+
+	.loading {
+		width: 50vh;
+		padding-top: 2vh;
+		padding-left: 10vh;
+		padding-right: 10vh;
+		font-size: 1.2vh;
+	}
+}
+
+
+
+
+
+
+
+
+
+.images {
+	border-radius: var(--border-radius);
+}

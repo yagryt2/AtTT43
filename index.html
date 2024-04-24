@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AtTT - Audio to Text Transcripter</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script scr="main.js"></script>
+	<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+	<title></title>
+</head>
+<body>
+	<div class="main-div">
+		<header>
+			<div class="top-header">
+				<label class="header-label">AUDIO TO TEXT</label>
+				<div class="header-top-image"></div>
+				<!--<img class="header-top-image" src="css\img\orange-gradient.jpg">-->
+			</div>
+			<div class="bottom-header">
+				<!--<img class="images" src="css\img\orange-glow-city-openart-image-photoshoped-1.png">-->
+				<div class="header-bottom-image"></div>
+				<label class="header-label">TRANSCRIBATOR</label>
+			</div>
+		</header>
+		<form class="getAudio">
+			<main class="input-and-output-background">
+				<div class="input-and-output">
+
+					<div class="input">			<!--Выбрать файл-->
+												<!--Сама кнопка выбора файла-->
+						<div class="audio">
+                			<label for="upload-audio" style="color: #86878B;">Нажмите, чтобы выбрать файл</label>
+
+           					<div style="opacity: 0;">	<!--Замаскированная кнопка выбора файла (не трогать)-->
+               					<input type="file" name="file" id="upload-audio" />
+              				</div>
+              			</div>
+              			<div class="loading-and-button">
+              				<div class="loading-div">
+								<div class="loading">	<!--loading-->
+									<span>L</span>
+									<span>O</span>
+									<span>A</span>
+									<span>D</span>
+									<span>I</span>
+									<span>N</span>
+									<span>G</span>
+								</div>
+							</div>
+							
+						</div>
+
+            		</div>
+													<!--Обработанный текст-->
+					<div class="output">
+						<div class="output-txt">
+							<py-script>						<!--ВЫПОЛНЕНИЕ ПИТОН КОДА (ВЫВОД ТРАНСКРИПЦИИ) (тут будет...)-->
+                  				print("Тут будет ваш транскрибированный текст")
+                			</py-script>
+						</div>
+					</div>
+				</div>
+			</main>
+			<div class="t-b-div">
+				<label class="trancribate-button">TRANSCRIBATE AUDIO FILE</label><!--Кнопка активирующая транскрибатор (файл.mp3 передаётся в питон)-->
+			</div>
+		</form>
+	</div>
+	<div class="hidden-black-bg">
+		
+	</div>
+</body>
+</html>
